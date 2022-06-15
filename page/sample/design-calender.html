@@ -2,20 +2,27 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <title>Dashboard | Overview |  관리시스템</title>
-    <meta name="description" content=" 관리시스템 대시보드" />
+    <title>Calender | Design | Sample |  관리시스템</title>
+    <meta name="description" content=" 관리시스템 샘플 레이아웃" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=1400" />
     <meta name="apple-mobile-web-app-title" content="관리자페이지" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../img/j.ico" />
     <link rel="stylesheet" href="../../lib/fa/css/all.min.css" />
     <link rel="stylesheet" href="../../css/web-font.css" />
     <link rel="stylesheet" href="../../css/style.css" />
     <script src="../../js/jquery-3.6.0.min.js"></script>
-    <script src="../../js/dino-common.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../lib/air-datepicker/datepicker.ko.js"></script>
+    <script src="../../lib/air-datepicker/datepicker.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+    <script src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
   </head>
-  <body class="sub overview dashboard">
+  <body class="sub sample design layout">
     <div id="wrapper">
       <a href="#" id="skip-nav">본문 바로가기</a>
       <header id="header">
@@ -46,7 +53,7 @@
         <nav>
           <h3>OVERIVEW</h3>
           <ul>
-            <li class="success"><a href="../overview/dashboard.html" title="Dashboard Dashboard Dashboard"><i class="xi-dashboard"></i><em>Dashboard Dashboard Dashboard</em><i class="fa-solid fa-angle-right"><span>서브메뉴있음</span></i></a></li>
+            <li><a href="../overview/dashboard.html" title="Dashboard Dashboard Dashboard"><i class="xi-dashboard"></i><em>Dashboard Dashboard Dashboard</em><i class="fa-solid fa-angle-right"><span>서브메뉴있음</span></i></a></li>
             <li>
               <a href="#"><i class="xi-profile"></i><em>My Page</em></a>
               <ul>
@@ -60,12 +67,12 @@
             <li>
               <a href="#"><i class="xi-palette"></i><em>Design</em></a>
               <ul>
-                <li class="success"><a href="../sample/design-layout.html">Layout</a></li>
-                <li class="success"><a href="../sample/design-button.html">Button</a></li>
-                <li class="success"><a href="../sample/design-form.html">Form</a></li>
+                <li><a href="../sample/design-layout.html">Layout</a></li>
+                <li><a href="../sample/design-button.html">Button</a></li>
+                <li><a href="../sample/design-form.html">Form</a></li>
                 <li><a href="../sample/design-list.html">List Page</a></li>
                 <li><a href="../sample/design-view.html">View Page</a></li>
-                <li class="success"><a href="../sample/design-edit.html">Edit Page</a></li>
+                <li><a href="../sample/design-edit.html">Edit Page</a></li>
               </ul>
             </li>
             <li>
@@ -82,31 +89,30 @@
       </section>
 
       <main id="main">
-        <h2>Dashboard</h2>
-        <p>Dashboard 샘플 : The most complete user interface framework that can be used to create stunning admin dashboards and presentation websites.</p>
+        <h2>Calender 샘플</h2>
+        <p>캘린더 샘플 : The most complete user interface framework that can be used to create stunning admin dashboards and presentation websites.</p>
+        <section>
+            <ul class="input-list">
+              <li> 
+                <input type="text" class="calender" id="datepicker" placeholder="날짜를 선택하세요." />
+                <i class="xi-calendar xi-fw"></i>
+              </li>
+              <li> 
+                <input type="text" class="calender" id="datepicker" placeholder="날짜를 선택하세요." />
+                <i class="xi-calendar xi-fw"></i>
+              </li>
+              <li> 
+                <input type="text" class="calender" id="datepicker" placeholder="날짜를 선택하세요." />
+                <i class="xi-calendar xi-fw"></i>
+              </li>
+              <li> 
+                <input type="text" class="calender" id="datepicker" placeholder="날짜를 선택하세요." />
+                <i class="xi-calendar xi-fw"></i>
+              </li>
 
-        <section class="container type-2">
-          <section>
-            <h3>박스1</h3>
-            <div id="chart1" style="height: 400px;">
-
-            </div>
-
-
-
-          </section>
-          <section>
-            <h3>박스1</h3>
-            <div id="chart2" style="height: 400px;">
-
-            </div>
-
-
-
-          </section>
-        </section>
-
-
+            </ul>
+            </section>
+  
 
       </main>
 
@@ -114,72 +120,11 @@
         <p>© Copyright 2022 jylee Inc. All Rights Reserved.</p>
       </footer>
     </div> <!-- #wrapper -->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
 
-    
-
-
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', '운영사', '운영사2','운영사3'],
-          ['2019',  1000,      400, 800 ],
-          ['2020',  1170,      460, 1000],
-          ['2021',  660,       1120, 3000],
-          ['2022',  1030,      540, 1800]
-        ]);
-
-        var options = {
-          title: 'Company Performance',
-          curveType: 'function',
-          width :'width',
-          legend: { position: 'right' }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('chart1'));
-
-        chart.draw(data, options);
-        $(window).on('resize',function(){
-          google.charts.setOnLoadCallback(drawChart);
-
-      });
-      
-      
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart2);
-
-      function drawChart2() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('chart2'));
-
-        chart.draw(data, options);
-      }
-    }
-    
-    
-
-// <script>
-// 'use strict';
-
-   </script>
+<script>
+'use strict';
 
 
-
+</script>
   </body>
 </html>

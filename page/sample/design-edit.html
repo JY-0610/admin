@@ -2,11 +2,11 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <title>Edit | Design | Sample | 디노웍스 관리시스템</title>
-    <meta name="description" content="디노웍스 관리시스템 샘플 Edit" />
+    <title>Edit | Design | Sample | 관리시스템</title>
+    <meta name="description" content="관리시스템 샘플 Edit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=1400" />
-    <meta name="apple-mobile-web-app-title" content="디노웍스" />
+    <meta name="apple-mobile-web-app-title" content="관리자페이지" />
     <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
     <link rel="stylesheet" href="../../lib/fa/css/all.min.css" />
     <link rel="stylesheet" href="../../lib/air-datepicker/datepicker.min.css" />
@@ -17,7 +17,8 @@
     <script src="../../lib/air-datepicker/datepicker.min.js"></script>
     <script src="../../lib/air-datepicker/datepicker.ko.js"></script>
     <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script src="../../js/dino-common.js"></script>
+    <script src="../../js/common.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   </head>
   <body class="sub sample design edit">
     <div id="wrapper">
@@ -25,15 +26,12 @@
       <header id="header">
         <div class="logo">
           <h1>
-            <a href="#" class="default"><img alt="DinoWorks" src="../../img/logo.png" /></a>
-            <a href="#" class="circle">DinoWorks</a>
+            <a href="#" class="default"><img alt="관리시스템" src="/img/jimg.png" /></a>
+            <a href="#" class="circle">adminpage</a>
           </h1>
           <a href="#" class="toggle"><i class="fa-solid fa-angle-left"><span>네비게이션 열기/닫기</span></i></a>
         </div>
         <div class="user">
-          <span class="photo" style="background-image: url(../../img/common/sample-face.jpg);">사용자 사진</span>
-          <em class="name">김정민<span>(전체관리자)</span></em>
-          <a href="#" class="toggle"><i class="fa-solid fa-angle-down"><span>사용자 상세정보 열기/닫기</span></i></a>
           <div class="layer-info">
 
           </div>
@@ -43,7 +41,8 @@
           <li><a href="#" target="_black" title="홈페이지 열기"><i class="fa-solid fa-desktop"><span>홈페이지 열기</span></i></a></li>
           <li><a href="#" title="개인정보설정"><i class="fa-solid fa-user-gear"><span>개인정보설정</span></i></a></li>
           <li><a href="#" title="비밀번호변경"><i class="fa-solid fa-lock"><span>비밀번호변경</span></i></a></li>
-          <li><a href="#" title="알람"><i class="fa-regular fa-bell"><span>알람</span></i></a></li>
+          <li><a href="#" title="알람"><i class="fa-regular fa-bell"><span>알람</span></i> <span class="num">2</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
         </ul>
       </header>
 
@@ -52,9 +51,9 @@
         <nav>
           <h3>OVERIVEW</h3>
           <ul>
-            <li><a href="../overview/dashboard.html" title="Dashboard Dashboard Dashboard"><i class="fa-solid fa-gauge"></i><em>Dashboard Dashboard Dashboard</em><i class="fa-solid fa-angle-right"><span>서브메뉴있음</span></i></a></li>
+            <li class="success"><a href="../overview/dashboard.html" title="Dashboard Dashboard Dashboard"><i class="xi-dashboard"></i><em>Dashboard Dashboard Dashboard</em><i class="fa-solid fa-angle-right"><span>서브메뉴있음</span></i></a></li>
             <li>
-              <a href="#"><i class="fa-solid fa-user-gear"></i><em>My Page</em></a>
+              <a href="#"><i class="xi-profile"></i><em>My Page</em></a>
               <ul>
                 <li><a href="#">개인정보관리</a></li>
                 <li><a href="#">비밀번호수정</a></li>
@@ -64,18 +63,18 @@
           <h3>Sample</h3>
           <ul>
             <li>
-              <a href="#"><i class="fa-solid fa-palette"></i><em>Design</em></a>
+              <a href="#"><i class="xi-palette"></i><em>Design</em></a>
               <ul>
-                <li><a href="../sample/design-layout.html">Layout</a></li>
-                <li><a href="../sample/design-button.html">Button</a></li>
-                <li><a href="../sample/design-form.html">Form</a></li>
+                <li class="success"><a href="../sample/design-layout.html">Layout</a></li>
+                <li class="success"><a href="../sample/design-button.html">Button</a></li>
+                <li class="success"><a href="../sample/design-form.html">Form</a></li>
                 <li><a href="../sample/design-list.html">List Page</a></li>
                 <li><a href="../sample/design-view.html">View Page</a></li>
-                <li><a href="../sample/design-edit.html">Edit Page</a></li>
+                <li class="success"><a href="../sample/design-edit.html">Edit Page</a></li>
               </ul>
             </li>
             <li>
-              <a href="#"><i class="fa-solid fa-cubes"></i><em>Module</em></a>
+              <a href="#"><i class="xi-view-module"></i><em>Module</em></a>
               <ul>
                 <li><a href="#">Chart</a></li>
                 <li><a href="#">Calendar</a></li>
@@ -353,7 +352,7 @@
       </main>
 
       <footer id="footer">
-        <p>© Copyright 2022 DinoWorks Inc. All Rights Reserved.</p>
+        <p>© Copyright 2022 jylee Inc. All Rights Reserved.</p>
       </footer>
     </div> <!-- #wrapper -->
 
@@ -379,7 +378,7 @@ var sampleData = {
 user_id:'test_ljy',
 name:'이지연',
 email:'jjyyyy0610@naver.com',
-org_name:'디노웍스(주)',
+org_name:'jylee',
 grade_seq:4,
 apply_date:'2022-03-29',
 apply_hour:'01:30',
