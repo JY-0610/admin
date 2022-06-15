@@ -249,7 +249,7 @@ table.form-box span.desc {font-size: 12px; color: #f56a62; margin-left: 20px; li
 
 
 .calender {position: relative; border: 1px solid #343a40; height: 35px;}
- ul.input-list i.xi-calender {position: absolute; right: 20px; top: 35%; width: 10px;height: 10px; font-size: 15px;  background-color: #ffffff;}
+ /* ul.input-list i.xi-calender {position: absolute; right: 20px; top: 35%; width: 10px;height: 10px; font-size: 15px;  background-color: #ffffff;} */
 .success {position: relative;}
  .success::after {content: ''; position: absolute; top: 50%; right: 0; width: 10px; height: 10px; border-radius: 100%;  background-color: rgba(144, 238, 144, 0.421); transition: all 0.4s; animation: opa infinite 1s; z-index: -1;}
  .success:nth-child(1) {transition-delay: 0.2s;}
